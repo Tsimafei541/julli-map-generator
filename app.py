@@ -98,21 +98,21 @@ with tab1:
     lots = {}
     
     st.markdown("### Результаты сделок (%)")
-    st.info("💡 **Совет:** Вставьте данные из MT5 или Myfxbook. Пропуски = 0.")
+    st.info("💡 Совет: Вставьте данные из MT5 или Myfxbook. Пропуски = 0.")
     
     # Таблица результатов
     cols_header = st.columns([1, 1.5, 1.5, 1.5, 1.5, 1.5])
     with cols_header[0]:
-        st.markdown("**Час**")
+        st.markdown("Час")
     for d_idx, day in enumerate(days):
         with cols_header[d_idx + 1]:
-            st.markdown(f"**{day}**")
+            st.markdown(f"{day}")
     
     for h_idx, hour in enumerate(hours):
         cols = st.columns([1, 1.5, 1.5, 1.5, 1.5, 1.5])
         
         with cols[0]:
-            st.markdown(f"**{hour}**")
+            st.markdown(f"{hour}")
         
         for d_idx in range(5):
             with cols[d_idx + 1]:
@@ -130,20 +130,20 @@ with tab1:
     st.markdown("---")
     
     st.markdown("### Размеры лотов по часам")
-    st.info("💡 **Совет:** Введите средние размеры лотов для визуализации адаптивности.")
+    st.info("💡 Совет: Введите средние размеры лотов для визуализации адаптивности.")
     
     cols_header_lot = st.columns([1, 1.5, 1.5, 1.5, 1.5, 1.5])
     with cols_header_lot[0]:
-        st.markdown("**Час**")
+        st.markdown("Час")
     for d_idx, day in enumerate(days):
         with cols_header_lot[d_idx + 1]:
-            st.markdown(f"**{day}**")
+            st.markdown(f"{day}")
     
     for h_idx, hour in enumerate(hours):
         cols_lot = st.columns([1, 1.5, 1.5, 1.5, 1.5, 1.5])
         
         with cols_lot[0]:
-            st.markdown(f"**{hour}**")
+            st.markdown(f"{hour}")
         
         for d_idx in range(5):
             with cols_lot[d_idx + 1]:
